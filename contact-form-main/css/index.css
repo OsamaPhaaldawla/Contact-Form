@@ -1,0 +1,223 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "/assets/fonts/karla", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+main {
+  background-color: hsl(148, 38%, 91%);
+  height: 100vh;
+  padding-top: 40px;
+  color: hsl(187, 24%, 22%);
+}
+main .container {
+  background-color: hsl(0, 0%, 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 750px;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 25px;
+}
+main h2 {
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+main label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  font-size: 16px;
+}
+main label::after {
+  content: "*";
+  color: hsl(169, 82%, 27%);
+  margin-left: 5px;
+}
+main .name-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+main .name-box .input-box {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 49%;
+}
+@media (max-width: 500px) {
+  main .name-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .name-box .input-box {
+    width: 100%;
+  }
+}
+main .input-box {
+  margin-bottom: 18px;
+}
+main input,
+main textarea,
+main .query {
+  padding: 13px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  border: 1px solid hsl(186, 15%, 59%);
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+main input:focus,
+main input:active,
+main textarea:focus,
+main textarea:active {
+  border: 2px solid hsl(169, 82%, 27%);
+}
+main input[type=email] {
+  width: 100%;
+}
+main .queries {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+main .queries .query {
+  width: 49%;
+  font-size: 16px;
+}
+main .queries .query img {
+  display: none;
+}
+main .queries .query input {
+  margin: 0;
+  margin-right: 10px;
+  width: 19.992px;
+  height: 20.977px;
+}
+@media (max-width: 500px) {
+  main .queries {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .queries .query {
+    width: 100%;
+  }
+}
+main .queries .checked {
+  background-color: hsl(148, 38%, 91%);
+}
+main .queries .checked img {
+  display: inline-block;
+  margin-right: 10px;
+}
+main .queries .checked input {
+  display: none;
+}
+main .queries input {
+  margin-right: 10px;
+  color: hsl(169, 82%, 27%);
+}
+main .queries label::after {
+  content: none;
+}
+main .consent-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .consent-box img {
+  display: none;
+}
+main label[for=consent] {
+  display: inline-block;
+  margin: 0;
+  margin-left: 15px;
+  font-size: 16px;
+}
+main input[type=checkbox] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+}
+main .checked img {
+  display: block !important;
+}
+main .checked input {
+  display: none;
+}
+main textarea {
+  width: 100%;
+  height: 120px;
+  resize: none;
+}
+main input[type=submit] {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 13px;
+  background-color: hsl(169, 82%, 27%);
+  color: white;
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-top: 35px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+main input[type=submit]:hover {
+  background-color: hsl(187, 24%, 22%);
+}
+main span {
+  color: hsl(0, 66%, 54%);
+  display: none;
+}
+main span.show {
+  display: block;
+}
+
+.pop-up {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: hsl(187, 24%, 22%);
+  color: hsl(186, 15%, 59%);
+  padding: 10px 30px 30px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: none;
+}
